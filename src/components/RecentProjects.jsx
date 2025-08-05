@@ -5,12 +5,14 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { TechnoComponent } from "./TechnoComponent";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+
 const videos = [
-  "/01.mp4",
-  "/02.mp4",
-  "/03.mp4",
-  "/04.mp4",
-  "/laravel-project.mp4",
+  "https://www.youtube.com/embed/Er9JuVdS7Dw?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/l5ypaXyKE30??rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/MT4-hzXIIyw?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/oqc-xDM3ku0?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/2yfdsvVF6ck?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/g7I0Tu_WHcg?rel=0&amp;autoplay=1&mute=1",
 ];
 
 export function RecentProjects() {
@@ -75,6 +77,17 @@ export function RecentProjects() {
             githubLink={"https://github.com/mrhamda/laravelShop"}
           />
         </div>
+
+        <div className="fadeIn">
+          <ProjectComponent
+            title={"Music player like spotify"}
+            built={"Built using React, Django, Tailwind, Typescript"}
+            content={
+              "Has the ability to play, paus and adjust volume. The artist can add songs, playlists as well normal users. People can follow. They get notifcations for realsed songs the subscribers. Much more just visit the github for more information"
+            }
+            githubLink={"https://github.com/mrhamda/music-player-python-django"}
+          />
+        </div>
       </div>
 
       <div className="font-bold uppercase text-center text-2xl underline">
@@ -103,7 +116,20 @@ export function RecentProjects() {
                 boxShadow: "inset 0 0 15px 2px #111", // inner bevel effect
               }}
             >
-              <video
+              <iframe
+                width="853"
+                height="480"
+                key={videos[current]}
+                src={videos[current]}
+                className="w-full h-[30rem] object-cover"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                controls
+              ></iframe>
+
+              {/* <video
                 key={videos[current]}
                 src={videos[current]}
                 preload="metadata"
@@ -114,7 +140,7 @@ export function RecentProjects() {
                 onEnded={goRight}
               >
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
             </div>
           </div>
 
@@ -143,7 +169,7 @@ export function RecentProjects() {
       </div>
 
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2" id="Contact">
+        <h2 className="text-2xl font-bold text-gray-800 mb-2" >
           Technologies
         </h2>
         <p className="text-gray-600 text-base mb-4">
@@ -242,12 +268,6 @@ export function RecentProjects() {
           />
 
           <TechnoComponent
-            imgSrc={"./Vite.svg"}
-            technoName={"Vite"}
-            link={"https://vite.dev"}
-          />
-
-          <TechnoComponent
             imgSrc={"./djagno.png"}
             technoName={"Django"}
             link={"https://www.djangoproject.com/community/logos"}
@@ -277,7 +297,7 @@ export function RecentProjects() {
         </p>
       </div>
 
-      <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
+      <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft" id="Contact">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           Why choose me?
         </h2>
