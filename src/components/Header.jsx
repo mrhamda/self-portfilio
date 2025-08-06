@@ -46,6 +46,7 @@ export function Header() {
     bg-center
     md:bg-top
     bg-black
+    text-white
   "
       id="Home"
     >
