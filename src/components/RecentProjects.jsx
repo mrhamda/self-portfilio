@@ -5,7 +5,6 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { TechnoComponent } from "./TechnoComponent";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-
 const videos = [
   "https://www.youtube.com/embed/Er9JuVdS7Dw?rel=0&amp;autoplay=1&mute=1",
   "https://www.youtube.com/embed/l5ypaXyKE30??rel=0&amp;autoplay=1&mute=1",
@@ -169,9 +168,7 @@ export function RecentProjects() {
       </div>
 
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2" >
-          Technologies
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Technologies</h2>
         <p className="text-gray-600 text-base mb-4">
           Over the years, I have worked with a variety of technologies. Here are
           some of the technologies I have experience with:
@@ -297,7 +294,7 @@ export function RecentProjects() {
         </p>
       </div>
 
-      <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft" id="Contact">
+      <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           Why choose me?
         </h2>
@@ -345,6 +342,7 @@ export function RecentProjects() {
           </a>
         </div>
       </div>
+      <div className="h-[20rem]"></div>
     </div>
   );
 }

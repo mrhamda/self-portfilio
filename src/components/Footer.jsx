@@ -3,7 +3,10 @@ import React from "react";
 export default function Footer() {
   const date = new Date().getFullYear();
   return (
-    <footer className="bottom-0 left-0 z-20 w-full p-4 bg-black border-t border-gray-200 shadow-sm md:flex md:items-center md:justify-between md:p-6 dark:bg-black dark:border-white mt-10 ">
+    <footer
+      id="Contact"
+      className="bottom-0 left-0 z-20 w-full p-4 bg-black border-t border-gray-200 shadow-sm md:flex md:items-center md:justify-between md:p-6 dark:bg-black dark:border-white mt-10 "
+    >
       <div className="flex justify-center items-center w-[100vw] overflow-hidden">
         <span className="text-sm text-white sm:text-cewhitenter dark:text-white">
           {date + " "}

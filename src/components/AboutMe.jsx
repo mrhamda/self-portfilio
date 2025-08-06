@@ -21,7 +21,7 @@ export function AboutMe() {
         <div className="flex justify-center md:justify-start fromLeft">
           <div className="card">
             <img
-              src="/Abdullahenchanced.jpg"
+              src="Abdullahenchanced.jpg"
               alt="About me"
               className="rounded-lg shadow-md object-cover h-[25rem] z-2 "
             />
