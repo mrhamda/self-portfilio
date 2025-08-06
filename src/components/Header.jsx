@@ -55,7 +55,7 @@ export function Header() {
 
       {/* Centered typewriter text */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-white text-3xl md:text-5xl font-semibold text-center px-4">
+        <h1 className="text-white light:text-white text-3xl md:text-5xl font-semibold text-center px-4">
           {displayedText}
           <span className="animate-pulse">|</span>
         </h1>

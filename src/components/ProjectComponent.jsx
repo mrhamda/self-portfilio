@@ -4,10 +4,10 @@ import React from "react";
 
 export function ProjectComponent({ content, title, built, githubLink }) {
   return (
-    <div className="flip-card">
+    <div className="flip-card light:text-white">
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <p className="title">{title}</p>
+          <p className="title ">{title}</p>
           <p>Hover Me</p>
         </div>
         <div className="flip-card-back relative pt-6">

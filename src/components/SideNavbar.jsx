@@ -58,16 +58,21 @@ export function SideNavbar() {
           const allItems = document.querySelectorAll(".link-me");
           allItems.forEach((item) => {
             item.classList.remove(
+              "ligt:bg-gray-800",
+
               "bg-gray-800",
               "text-white",
-              "pointer-events-none"
+              "pointer-events-none",
+              "light:text-white"
             );
             const href = item.getAttribute("href")?.substring(1);
             if (href === section.id) {
               item.classList.add(
                 "bg-gray-800",
                 "text-white",
-                "pointer-events-none"
+                "pointer-events-none",
+                "light:text-white",
+                "ligt:bg-gray-800"
               );
             }
           });
