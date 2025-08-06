@@ -34,6 +34,8 @@ export default function RootLayout({ children }) {
 
         <head>
           <meta name="color-scheme" content="light" />
+          <meta name="theme-color" content="#ffffff" />
+
         </head>
 
       </html >
