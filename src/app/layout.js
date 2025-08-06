@@ -32,6 +32,10 @@ export default function RootLayout({ children }) {
           {children}
         </body>
 
+        <head>
+          <meta name="color-scheme" content="light" />
+        </head>
+
       </html >
     </ContextProvider>
 
