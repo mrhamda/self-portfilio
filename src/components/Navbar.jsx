@@ -25,11 +25,11 @@ export function Navbar() {
           <div
             id="navbar-cta"
             className="
-    top-2 right-2 z-50
+     top-2 right-2 z-50
     flex items-center justify-center
     w-12 h-12
-    bg-white dark:bg-gray-900 rounded-md
-    md:static md:w-auto md:h-auto md:bg-transparent md:dark:bg-transparent md:rounded-none
+    bg-white rounded-md
+    md:static md:w-auto md:h-auto md:bg-transparent md:rounded-none
   "
           >
             <ul
@@ -39,16 +39,18 @@ export function Navbar() {
       md:flex-row md:p-0 md:m-0
     "
             >
+              {" "}
               <li>
                 <a
                   aria-current="page"
                   className="
           block
-          text-black dark:text-white
+          text-black
           hover:opacity-30 transition-all scale-125
+          md:text-blue-black md:dark:text-blue-black
         "
                 >
-                  <div>
+                  <div className="">
                     <input
                       id="checkbox"
                       type="checkbox"
