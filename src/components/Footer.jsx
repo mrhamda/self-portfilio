@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex justify-center items-center w-[100vw] overflow-hidden">
         <span className="text-sm light:text-white text-white sm:text-cewhitenter dark:text-white">
           {date + " "}
-          <a href="https://flowbite.com/" className="hover:underline">
+          <a href="#home" className="hover:underline">
             Abdullah Hamdan
           </a>
           . All Rights Reserved.
