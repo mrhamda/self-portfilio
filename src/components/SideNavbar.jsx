@@ -12,29 +12,42 @@ export function SideNavbar() {
     const allItems = document.querySelectorAll(".link-me");
 
     allItems.forEach((x) => {
-      x.classList.remove("bg-gray-800");
-      x.classList.remove("text-white");
-      x.classList.remove("pointer-events-none");
+      // Remove active classes
+      x.classList.remove(
+        "bg-gray-800",
+        "text-white",
+        "pointer-events-none",
+        "light:text-white",
+        "ligt:bg-gray-800"
+      );
     });
 
-    e.target.classList.add("bg-gray-800");
-    e.target.classList.add("text-white");
-
-    e.target.classList.add("pointer-events-none");
+    // Add active classes to the clicked element
+    e.currentTarget.classList.add(
+      "bg-gray-800",
+      "text-white",
+      "pointer-events-none",
+      "light:text-white",
+      "ligt:bg-gray-800"
+    );
   }
 
-  // 💡 Updated useEffect Hook for scroll-based link activation
+  // 💡 FIXED useEffect Hook for scroll-based link activation
   useEffect(() => {
-    // 1. Get all section elements
-    const sections = [
-      document.querySelector("#Home"),
-      document.querySelector("#Aboutme"),
-      document.querySelector("#Projects"),
-      document.querySelector("#Certs"),
-      document.querySelector("#Technologies"),
-      document.querySelector("#Cybersecruity"),
-      document.querySelector("#Contact"),
-    ].filter((section) => section !== null); // Filter out any sections that weren't found
+    // 1. Get all section elements (Corrected typo for consistency with link href)
+    const sectionIds = [
+      "Home",
+      "Aboutme",
+      "Projects",
+      "Certs",
+      "Technologies",
+      "Cybersecruity",
+      "Contact",
+    ];
+
+    const sections = sectionIds
+      .map((id) => document.querySelector(`#${id}`))
+      .filter((section) => section !== null);
 
     // 2. Main scroll handler function
     function handleScroll() {
@@ -42,39 +55,39 @@ export function SideNavbar() {
       const windowHeight = window.innerHeight;
       const documentHeight = document.body.offsetHeight;
       const scrollableHeight = documentHeight - windowHeight;
-
-      // --- New Logic for 200px near bottom ---
-      const proximityThreshold = 200;
-      const isNearBottom = scrollY >= scrollableHeight - proximityThreshold;
-      // ---------------------------------------
+      const SCROLL_OFFSET = 150; // Adjust this value to select the link earlier/later (e.g., 150px)
 
       let activeSectionId = null;
 
-      // First, check the special "near bottom" condition for the Contact section
-      if (isNearBottom) {
-        // The last section is assumed to be Contact
-        activeSectionId = sections[sections.length - 1]?.id || null;
-      } else {
-        // Otherwise, use the standard intersection logic
-        for (let i = 0; i < sections.length; i++) {
+      // --- Logic for final section when scrolling to the bottom ---
+      // Force 'Contact' to be active when the user is at the very bottom of the page.
+      // This is necessary because the last section might be shorter than the window height.
+      if (scrollY >= scrollableHeight - 5) {
+        // 5px tolerance at the very bottom
+        activeSectionId = "Contact";
+      }
+
+      // --- Standard intersection logic for all sections ---
+      // Iterate sections in reverse order to ensure the lowest visible section is selected.
+      if (!activeSectionId) {
+        for (let i = sections.length - 1; i >= 0; i--) {
           const section = sections[i];
           if (!section) continue;
 
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
 
-          // You can adjust the offset (-50) to make it select slightly earlier
-          const intersectionOffset = 50;
-
-          const isInSection =
-            scrollY >= sectionTop - intersectionOffset &&
-            scrollY < sectionTop + sectionHeight - intersectionOffset;
-
-          if (isInSection) {
+          // Check if the current scroll position is past the top of the section,
+          // adjusted by the offset.
+          if (scrollY >= sectionTop - SCROLL_OFFSET) {
             activeSectionId = section.id;
             break; // Found the active section, stop iterating
           }
         }
+      }
+
+      // If nothing is active (usually at the very top), default to Home
+      if (!activeSectionId && sections[0]) {
+        activeSectionId = sections[0].id;
       }
 
       // 3. Apply active state to the corresponding link
@@ -84,13 +97,14 @@ export function SideNavbar() {
         allItems.forEach((item) => {
           // Remove all active classes from all links
           item.classList.remove(
-            "ligt:bg-gray-800",
             "bg-gray-800",
             "text-white",
             "pointer-events-none",
-            "light:text-white"
+            "light:text-white",
+            "ligt:bg-gray-800"
           );
 
+          // Use the href attribute without the '#'
           const href = item.getAttribute("href")?.substring(1);
 
           // Add active classes to the matching link
@@ -188,7 +202,7 @@ export function SideNavbar() {
               onClick={activeLink}
               className="flex items-center px-6 py-3 rounded transition hover:text-white text-black hover:bg-gray-200 dark:hover:bg-gray-800 link-me"
             >
-              Certifcations
+              Certifications
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </a>
           </li>

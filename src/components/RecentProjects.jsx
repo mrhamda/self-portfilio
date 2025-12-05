@@ -442,7 +442,7 @@ export function RecentProjects() {
         </p>
       </div>
       <div
-        className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft"
+        className="w-full max-w-4xl mx-auto h-[250px] bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft"
         id="Cybersecruity"
       >
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Cybersecurity</h2>
