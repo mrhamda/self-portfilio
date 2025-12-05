@@ -139,7 +139,7 @@ export function RecentProjects() {
               "https://www.credly.com/badges/38e4019d-599a-4128-83d4-2e58501e4c01/public_url"
             }
             category={"Certifcation"}
-            imgUrl={"../js.png"}
+            imgUrl={"public/../js.png"}
           />
         </div>
 
@@ -156,7 +156,7 @@ export function RecentProjects() {
               "https://www.credly.com/badges/2d63ff0d-57cb-46fb-a644-5c4e78a17757/public_url"
             }
             category={"Certifcation"}
-            imgUrl={"../py_cert.png"}
+            imgUrl={"public/../py_cert.png"}
           />
         </div>
 
@@ -173,7 +173,7 @@ export function RecentProjects() {
               "https://www.credly.com/badges/0af7938e-0ee1-4887-8ca8-28687d8ece5c/public_url"
             }
             category={"Certifcation"}
-            imgUrl={"../cyber_cert.png"}
+            imgUrl={"public/../cyber_cert.png"}
           />
         </div>
 
@@ -190,7 +190,7 @@ export function RecentProjects() {
               "https://www.credly.com/badges/5cca2401-00d5-41a1-8fb7-10a8fb56ca3d/public_url"
             }
             category={"Certifcation"}
-            imgUrl={"../net_cert.png"}
+            imgUrl={"public/../net_cert.png"}
           />
         </div>
 
@@ -207,7 +207,7 @@ export function RecentProjects() {
               "https://www.credly.com/badges/5b89f4ab-2a46-4122-8261-97ab0cd29735/public_url"
             }
             category={"Certifcation"}
-            imgUrl={"../js.png"}
+            imgUrl={"public/../js.png"}
           />
         </div>
       </div>

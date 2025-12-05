@@ -31,7 +31,7 @@ export function Certifaction({
               style={{ textShadow: "3px 3px 6px rgba(255, 255, 255, 0.8)" }}
             >
               <img
-                src="../credly1.png"
+                src="public/../credly1.png"
                 style={{ width: "25px", height: "25px" }}
                 className="rounded-full"
               />
