@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 
 export function Header() {
   const texts = [
-    "HEY 👋 I AM ABDULLAH HAMDAN, FULLSTACK WEBDEVELOPER.",
-    "MY MISSION IS TO BUILD YOU A WEBSITE WITH MINIMAL COST 🚀",
+    "Het 👋 I am Abdullah Hamdan, Fullstack Webdeveloper & Cybersecurity Specialist",
+    "I am just building this website to showcase my achievments aswell my projects",
+    "I hope that one day we can meet and get to know eachother!",
   ];
 
   const [displayedText, setDisplayedText] = useState("");
-  const [index, setIndex] = useState(0); // index in current text
-  const [textIndex, setTextIndex] = useState(0); // index in texts array
+  const [index, setIndex] = useState(0); 
+  const [textIndex, setTextIndex] = useState(0); 
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
@@ -50,10 +51,8 @@ export function Header() {
   "
       id="Home"
     >
-      {/* Black overlay */}
       <div className="absolute inset-0 bg-black opacity-80"></div>
 
-      {/* Centered typewriter text */}
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-white light:text-white text-3xl md:text-5xl font-semibold text-center px-4">
           {displayedText}

@@ -391,7 +391,7 @@ export function RecentProjects() {
           <TechnoComponent
             imgSrc={"./unity.png"}
             technoName={"unity"}
-            link={"https://vite.dev"}
+            link={"https://unity.com"}
           />
 
           <TechnoComponent
@@ -431,7 +431,7 @@ export function RecentProjects() {
           <span> and see my projects!</span>
         </p>
       </div>
-      <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
+      {/* <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           Why choose me?
         </h2>
@@ -440,7 +440,7 @@ export function RecentProjects() {
           really for money. I am just doing that to get real life experience. So
           that means the price can be discussed.
         </p>
-      </div>
+      </div> */}
       <div
         className="w-full max-w-4xl mx-auto h-[250px] bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft"
         id="Cybersecruity"

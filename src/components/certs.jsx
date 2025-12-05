@@ -11,7 +11,6 @@ export function Certifaction({
   return (
     <div className="card01 light:text-white">
       <div className="card01-inner">
-        {/* ---------- FRONT (400px image) ---------- */}
         <div className="card01-front flex flex-col items-center p-3">
           <img
             src={imgUrl}
@@ -31,9 +30,9 @@ export function Certifaction({
               style={{ textShadow: "3px 3px 6px rgba(255, 255, 255, 0.8)" }}
             >
               <img
-                src="public/../credly1.png"
-                style={{ width: "25px", height: "25px" }}
-                className="rounded-full"
+                src="public/../c.png"
+                style={{ width: "40px", height: "34px" }}
+                className="rounded-full mt-1"
               />
             </a>
           </div>
@@ -41,8 +40,6 @@ export function Certifaction({
           <p className="title mt-3">{title}</p>
           <p>{category}</p>
         </div>
-
-        {/* ---------- BACK ---------- */}
       </div>
     </div>
   );

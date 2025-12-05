@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Abdullah AH",
+  title: "Abdullah Dev",
   description: "A portfilio about a young fullstack webdevloper",
 };
 

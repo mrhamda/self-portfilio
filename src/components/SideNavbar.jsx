@@ -12,7 +12,6 @@ export function SideNavbar() {
     const allItems = document.querySelectorAll(".link-me");
 
     allItems.forEach((x) => {
-      // Remove active classes
       x.classList.remove(
         "bg-gray-800",
         "text-white",
@@ -22,7 +21,6 @@ export function SideNavbar() {
       );
     });
 
-    // Add active classes to the clicked element
     e.currentTarget.classList.add(
       "bg-gray-800",
       "text-white",
@@ -32,9 +30,7 @@ export function SideNavbar() {
     );
   }
 
-  // 💡 FIXED useEffect Hook for scroll-based link activation
   useEffect(() => {
-    // 1. Get all section elements (Corrected typo for consistency with link href)
     const sectionIds = [
       "Home",
       "Aboutme",
@@ -49,26 +45,21 @@ export function SideNavbar() {
       .map((id) => document.querySelector(`#${id}`))
       .filter((section) => section !== null);
 
-    // 2. Main scroll handler function
     function handleScroll() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.body.offsetHeight;
       const scrollableHeight = documentHeight - windowHeight;
-      const SCROLL_OFFSET = 150; // Adjust this value to select the link earlier/later (e.g., 150px)
+      const SCROLL_OFFSET = 150; 
 
       let activeSectionId = null;
 
-      // --- Logic for final section when scrolling to the bottom ---
-      // Force 'Contact' to be active when the user is at the very bottom of the page.
-      // This is necessary because the last section might be shorter than the window height.
+    
       if (scrollY >= scrollableHeight - 5) {
-        // 5px tolerance at the very bottom
         activeSectionId = "Contact";
       }
 
-      // --- Standard intersection logic for all sections ---
-      // Iterate sections in reverse order to ensure the lowest visible section is selected.
+     
       if (!activeSectionId) {
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = sections[i];
@@ -76,8 +67,6 @@ export function SideNavbar() {
 
           const sectionTop = section.offsetTop;
 
-          // Check if the current scroll position is past the top of the section,
-          // adjusted by the offset.
           if (scrollY >= sectionTop - SCROLL_OFFSET) {
             activeSectionId = section.id;
             break; // Found the active section, stop iterating
@@ -85,12 +74,10 @@ export function SideNavbar() {
         }
       }
 
-      // If nothing is active (usually at the very top), default to Home
       if (!activeSectionId && sections[0]) {
         activeSectionId = sections[0].id;
       }
 
-      // 3. Apply active state to the corresponding link
       if (activeSectionId) {
         const allItems = document.querySelectorAll(".link-me");
 
@@ -104,10 +91,8 @@ export function SideNavbar() {
             "ligt:bg-gray-800"
           );
 
-          // Use the href attribute without the '#'
           const href = item.getAttribute("href")?.substring(1);
 
-          // Add active classes to the matching link
           if (href === activeSectionId) {
             item.classList.add(
               "bg-gray-800",
@@ -121,11 +106,9 @@ export function SideNavbar() {
       }
     }
 
-    // 4. Set up scroll listener and initial call
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // run once on mount
 
-    // 5. Cleanup function
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
