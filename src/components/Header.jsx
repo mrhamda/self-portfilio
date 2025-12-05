@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function Header() {
   const texts = [
-    "Het 👋 I am Abdullah Hamdan, Fullstack Webdeveloper & Cybersecurity Specialist",
+    "Hey 👋 I am Abdullah Hamdan, Fullstack Webdeveloper & Cybersecurity Specialist",
     "I am just building this website to showcase my achievments aswell my projects",
     "I hope that one day we can meet and get to know eachother!",
   ];
@@ -62,3 +62,4 @@ export function Header() {
     </div>
   );
 }
+
