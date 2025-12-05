@@ -477,7 +477,7 @@ export function RecentProjects() {
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Contact me</h2>
         <p className="text-gray-600 text-base mb-4">
           So I currently don't have any social medias like instagram, facebooks
-          and such for facebooks. Only whatsapp is available for communction.
+          and such for discussion. Only whatsapp is available for communction.
           Github is available for thoose who want to see my code.
         </p>
 
@@ -525,3 +525,4 @@ export function RecentProjects() {
     </div>
   );
 }
+
