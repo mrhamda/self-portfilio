@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="Contact"
-      className="bottom-0 light:text-white left-0 z-20 w-full p-4 bg-black border-t border-gray-200 shadow-sm md:flex md:items-center md:justify-between md:p-6 dark:bg-black dark:border-white mt-10 "
+      className="bottom-0 light:text-white left-0 z-20 w-full p-12 bg-black border-t border-gray-200 shadow-sm md:flex md:items-center md:justify-between md:p-6 dark:bg-black dark:border-white mt-10 "
     >
       <div className="flex justify-center items-center w-[100vw] overflow-hidden">
         <span className="text-sm light:text-white text-white sm:text-cewhitenter dark:text-white">

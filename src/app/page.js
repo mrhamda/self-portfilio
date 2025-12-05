@@ -140,6 +140,7 @@ export default function Home() {
 
             <RecentProjects />
 
+
             <Footer />
 
           </div>

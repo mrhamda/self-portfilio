@@ -3,7 +3,8 @@ import { ProjectComponent } from "./ProjectComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { TechnoComponent } from "./TechnoComponent";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faItchIo } from "@fortawesome/free-brands-svg-icons";
+import { Certifaction } from "./certs";
 
 const videos = [
   "https://www.youtube.com/embed/Er9JuVdS7Dw?rel=0&amp;autoplay=1&mute=1",
@@ -12,6 +13,8 @@ const videos = [
   "https://www.youtube.com/embed/oqc-xDM3ku0?rel=0&amp;autoplay=1&mute=1",
   "https://www.youtube.com/embed/2yfdsvVF6ck?rel=0&amp;autoplay=1&mute=1",
   "https://www.youtube.com/embed/g7I0Tu_WHcg?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/6p5u5-mRbfU?si=jVE6Jq-4PryaV8nz?rel=0&amp;autoplay=1&mute=1",
+  "https://www.youtube.com/embed/1dor57LQWSA?si=Z2IX4sS06Ccx78Aa?rel=0&amp;autoplay=1&mute=1",
 ];
 
 export function RecentProjects() {
@@ -36,7 +39,6 @@ export function RecentProjects() {
           </p>
         </div>
       </div>
-
       <div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
         <div className="fadeIn">
           <ProjectComponent
@@ -48,6 +50,7 @@ export function RecentProjects() {
               "The chatapp has functionalties like adding friends, chatting with them, sending pictures, voice messages e.t.c. Being able to voice call friends. Realtime noftifcations."
             }
             githubLink={"https://github.com/mrhamda/chatAppAdvance"}
+            category={"Web application"}
           />
         </div>
 
@@ -60,6 +63,7 @@ export function RecentProjects() {
             content={
               "Has the ability to put items in cart, to later buy them using either paypal or stipe. Has a form to submit the adress and personal information required for delievery. The order that get paid will later be put in the admin dashboard so that they know where to deliever"
             }
+            category={"Web application"}
             githubLink={"https://github.com/mrhamda/restaurantDelievery"}
           />
         </div>
@@ -70,6 +74,7 @@ export function RecentProjects() {
             built={
               "Built using React Inertia Laravel, Tailwind, Sqllite, Dbengine, Tableplus"
             }
+            category={"Web application"}
             content={
               "Is an app with full authenication as well email vertifcation. It is about selling and buying. You post products for other people to buy. You can visit their profile. It is almost like a social media for selling and buying. The buyer and seller recieve info about their actions and if a seller tries to deny a guy bought from him and try to scam him they can't because it is saved in the database."
             }
@@ -84,11 +89,128 @@ export function RecentProjects() {
             content={
               "Has the ability to play, paus and adjust volume. The artist can add songs, playlists as well normal users. People can follow. They get notifcations for realsed songs the subscribers. Much more just visit the github for more information"
             }
+            category={"Web application"}
             githubLink={"https://github.com/mrhamda/music-player-python-django"}
           />
         </div>
-      </div>
 
+        <div className="fadeIn">
+          <ProjectComponent
+            title={"Multiplayer game"}
+            built={"Built using Photon 2, unity C#"}
+            content={
+              "Has the ability to join and make rooms for players to play together online. Voice chat is also included. This is based on the old movie squide game, the glass scene. So people can play and whoever reaches the glass first wins. If you fall from the glass then you respawn after certain time."
+            }
+            category={"Game application"}
+            githubLink={"https://abdullahhamdan.itch.io/sorry-bean"}
+          />
+        </div>
+
+        <div className="fadeIn">
+          <ProjectComponent
+            title={"First gamejam"}
+            built={"Built using unity C#"}
+            content={
+              "I made this game for a game jam competion. It was my first time ever. I got the assets from brackeyes like the animations and drawings and purely coded the code. This game is about to shoot enemies and get the highest score you can. There are different skills like shooting a small ball or shooting an ultimate."
+            }
+            category={"Game application"}
+            githubLink={"https://abdullahhamdan.itch.io/light-wizard"}
+          />
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      {/* certs */}
+      <div className="font-bold uppercase text-center text-2xl underline">
+        <div className="p-4 flex flex-col justify-center h-full" id="Certs">
+          <p className="text-slate-600 leading-relaxed font-light fromUp">
+            Here are some of my certifactions
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
+        <div className="fadeIn">
+          <Certifaction
+            title={"Javascript"}
+            built={""}
+            content={""}
+            link={
+              "https://www.credly.com/badges/38e4019d-599a-4128-83d4-2e58501e4c01/public_url"
+            }
+            category={"Certifcation"}
+            imgUrl={"../js.png"}
+          />
+        </div>
+
+        <div className="fadeIn">
+          <Certifaction
+            title={"Python"}
+            built={
+              "Built using firebase, React, Next js, Tailwind, Typescript, Webtrc"
+            }
+            content={
+              "The chatapp has functionalties like adding friends, chatting with them, sending pictures, voice messages e.t.c. Being able to voice call friends. Realtime noftifcations."
+            }
+            link={
+              "https://www.credly.com/badges/2d63ff0d-57cb-46fb-a644-5c4e78a17757/public_url"
+            }
+            category={"Certifcation"}
+            imgUrl={"../py_cert.png"}
+          />
+        </div>
+
+        <div className="fadeIn">
+          <Certifaction
+            title={"Cybersecurity"}
+            built={
+              "Built using firebase, React, Next js, Tailwind, Typescript, Webtrc"
+            }
+            content={
+              "The chatapp has functionalties like adding friends, chatting with them, sending pictures, voice messages e.t.c. Being able to voice call friends. Realtime noftifcations."
+            }
+            link={
+              "https://www.credly.com/badges/0af7938e-0ee1-4887-8ca8-28687d8ece5c/public_url"
+            }
+            category={"Certifcation"}
+            imgUrl={"../cyber_cert.png"}
+          />
+        </div>
+
+        <div className="fadeIn">
+          <Certifaction
+            title={"Network"}
+            built={
+              "Built using firebase, React, Next js, Tailwind, Typescript, Webtrc"
+            }
+            content={
+              "The chatapp has functionalties like adding friends, chatting with them, sending pictures, voice messages e.t.c. Being able to voice call friends. Realtime noftifcations."
+            }
+            link={
+              "https://www.credly.com/badges/5cca2401-00d5-41a1-8fb7-10a8fb56ca3d/public_url"
+            }
+            category={"Certifcation"}
+            imgUrl={"../net_cert.png"}
+          />
+        </div>
+
+        <div className="fadeIn">
+          <Certifaction
+            title={"Java"}
+            built={
+              "Built using firebase, React, Next js, Tailwind, Typescript, Webtrc"
+            }
+            content={
+              "The chatapp has functionalties like adding friends, chatting with them, sending pictures, voice messages e.t.c. Being able to voice call friends. Realtime noftifcations."
+            }
+            link={
+              "https://www.credly.com/badges/5b89f4ab-2a46-4122-8261-97ab0cd29735/public_url"
+            }
+            category={"Certifcation"}
+            imgUrl={"../js.png"}
+          />
+        </div>
+      </div>
       <div className="font-bold uppercase text-center text-2xl underline">
         <div className="p-4 flex flex-col justify-center h-full">
           <p className="text-slate-600 leading-relaxed font-light mt-6">
@@ -166,7 +288,9 @@ export function RecentProjects() {
           </button>
         </div>
       </div>
-
+      <br />
+      <br />
+      <br />
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Technologies</h2>
         <p className="text-gray-600 text-base mb-4">
@@ -265,6 +389,12 @@ export function RecentProjects() {
           />
 
           <TechnoComponent
+            imgSrc={"./unity.png"}
+            technoName={"unity"}
+            link={"https://vite.dev"}
+          />
+
+          <TechnoComponent
             imgSrc={"./djagno.png"}
             technoName={"Django"}
             link={"https://www.djangoproject.com/community/logos"}
@@ -282,18 +412,25 @@ export function RecentProjects() {
         <p className="text-gray-600 text-base mb-4">And so much more!</p>
 
         <p className="text-gray-600 text-base mb-4">
-          Here you can visit my and{" "}
+          Here you can visit my{" "}
           <a
             className="text-blue-500 text-base mb-4 hover:text-blue-800 transition-all"
             href="https://github.com/mrhamda?tab=repositories"
             target="_blank"
           >
             Github
+          </a>{" "}
+          or{" "}
+          <a
+            className="text-blue-500 text-base mb-4 hover:text-blue-800 transition-all"
+            href="https://abdullahhamdan.itch.io"
+            target="_blank"
+          >
+            itch.io
           </a>
           <span> and see my projects!</span>
         </p>
       </div>
-
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           Why choose me?
@@ -303,6 +440,37 @@ export function RecentProjects() {
           really for money. I am just doing that to get real life experience. So
           that means the price can be discussed.
         </p>
+      </div>
+      <div
+        className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 fromLeft"
+        id="Cybersecruity"
+      >
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Cybersecurity</h2>
+        <span className="text-gray-600 text-base mb-4">
+          I am ambitious about cybersecurity and I have paticpated in many ctfs.
+          I have also particpated with{" "}
+          <a
+            className="text-blue-500 text-base mb-4 hover:text-blue-800 transition-all"
+            href="https://royalroppers.team"
+            target="_blank"
+          >
+            Royalreppers.
+          </a>{" "}
+          I usually do a lot of ctfs and I am currently placed in the top 10's
+          playing as a.b.h.a (<b>Ab</b>dullah <b>Ha</b>mdan){" "}
+          <a
+            className="text-blue-500 text-base mb-4 hover:text-blue-800 transition-all"
+            href="https://sakerhetssm.se/scoreboard
+"
+            target="_blank"
+          >
+            in säkerhets SSM .
+          </a>
+          <span>
+            I parctipated once with a competion where my team placed 2nd and it
+            was one of my first capture the flag ever!
+          </span>
+        </span>
       </div>
 
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 hover:shadow-xl transition-shadow duration-300 mt-10 overflow fromLeft">
@@ -322,6 +490,17 @@ export function RecentProjects() {
             <FontAwesomeIcon
               className="socialSvg whatsappSvg "
               icon={faGithub}
+            />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://abdullahhamdan.itch.io"
+            className="socialContainer containerFour cursor-pointer"
+          >
+            <FontAwesomeIcon
+              className="socialSvg whatsappSvg "
+              icon={faItchIo}
             />
           </a>
           <a
